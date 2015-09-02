@@ -14,6 +14,10 @@ class Deck
     @cards.shuffle!
   end
 
+  def deal_card
+    @cards.pop
+  end
+
   private
 
   def generate_cards
