@@ -1,14 +1,18 @@
 require 'card'
 
 class Deck
-  attr_reader :cards
+  attr_accessor :cards
 
   def initialize
     @cards = generate_cards
   end
 
   Suits = [:heart, :spade, :club, :diamond]
-  Ranks = 1..13
+  Ranks = (2..10).to_a.map(&:to_s) + ['Jack', 'Queen', 'King', 'Ace']
+
+  def shuffle
+    @cards.shuffle!
+  end
 
   private
 
