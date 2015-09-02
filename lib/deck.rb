@@ -10,7 +10,7 @@ class Deck
   Suits = [:heart, :spade, :club, :diamond]
   Ranks = (2..10).to_a.map(&:to_s) + ['Jack', 'Queen', 'King', 'Ace']
 
-  def shuffle
+  def shuffle!
     @cards.shuffle!
   end
 

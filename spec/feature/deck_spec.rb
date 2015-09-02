@@ -25,7 +25,7 @@ describe Deck do
 
   it "can be shuffled" do
     initial_cards = @c.dup
-    @deck.shuffle
+    @deck.shuffle!
     @deck.cards.wont_equal initial_cards
   end
 
