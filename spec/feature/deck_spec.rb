@@ -22,4 +22,15 @@ describe Deck do
      @c.count { |card| card.rank == r }.must_equal 4
     end
   end
+
+  it "can be shuffled" do
+    initial_cards = @c.dup
+    @deck.shuffle
+    @deck.cards.wont_equal initial_cards
+  end
+
+  it "lets you deal a card" do
+    @deck.deal_card.must_be_instance_of Card
+    @deck.cards.length.must_equal 51
+  end
 end
