@@ -7,7 +7,7 @@ Create a new deck:
 
 `deck = Deck.new`
 
-Shuffle those cards, you cheater!:
+Shuffle those cards, *you cheater!*:
 
 `deck.shuffle!`
 

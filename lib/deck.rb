@@ -7,8 +7,8 @@ class Deck
     @cards = generate_cards
   end
 
-  Suits = [:heart, :spade, :club, :diamond]
-  Ranks = (2..10).to_a.map(&:to_s) + ['Jack', 'Queen', 'King', 'Ace']
+  SUITS = [:heart, :spade, :club, :diamond]
+  RANKS = (2..10).to_a.map(&:to_s) + %w(Jack, Queen, King, Ace)
 
   def shuffle!
     @cards.shuffle!
@@ -22,8 +22,8 @@ class Deck
 
   def generate_cards
     cards = []
-    Suits.each do |suit|
-      Ranks.each do |rank|
+    SUITS.each do |suit|
+      RANKS.each do |rank|
         cards << Card.new(suit, rank)
       end
     end
