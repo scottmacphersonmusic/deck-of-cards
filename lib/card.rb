@@ -1,8 +1,2 @@
-class Card
-  attr_reader :suit, :rank
-
-  def initialize(suit, rank)
-    @suit = suit
-    @rank = rank
-  end
+Card = Struct.new(:suit, :rank) do
 end
