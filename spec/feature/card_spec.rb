@@ -3,7 +3,7 @@ require "card"
 
 describe Card do
   before do
-    @card = Card.new
+    @card = Card.new(:heart, 7)
   end
 
   it "has a suit" do
